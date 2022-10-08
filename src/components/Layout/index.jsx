@@ -1,13 +1,21 @@
 import React from 'react';
 
 import Header from '../Header';
+import PropTypes from 'prop-types';
 
-const index = () => {
+
+const Layout = ({children}) => {
     return (
         <>
             <Header />
+            <main> {children} </main>
         </>
     );
 };
 
-export default index;
+Layout.propType = {
+    children: PropTypes.node
+}
+
+
+export default Layout;

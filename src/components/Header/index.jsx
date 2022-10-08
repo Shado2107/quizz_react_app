@@ -1,33 +1,23 @@
-import { AppBar, Container, Toolbar, Typography } from '@mui/material';
 import React from 'react';
+import {Menu, Button} from 'semantic-ui-react'
 
-const index = () => {
+const Header = () => {
     return (
-        <AppBar position='static'>
-            <Container maxWidth='x1'>
-                <Toolbar disableGutters>
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="a"
-                        href="/"
-                        sx={{ 
-                            mr:2,
-                            display: {xs:'none', md: 'flex'},
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                         }}
-                    >
-                        LOGO
-                    </Typography>
-        
-                </Toolbar>
-            </Container>
-        </AppBar>
+      <Menu stackable inverted size="massive">
+          <Menu.Item header>
+              <h1 style={{ color: '#2185D0' }}>QuizApp</h1>
+          </Menu.Item>
+          <Menu.Item position='right'>
+              <Button
+                color='tea1'
+                icon=""
+                labelPosition='left'
+                content="Install App"
+                
+              />
+          </Menu.Item>
+      </Menu>
     );
 };
 
-export default index;
+export default Header
